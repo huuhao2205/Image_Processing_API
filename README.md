@@ -28,7 +28,7 @@ It wil transpile from Typescript to Javascirpt and copy the "views" folder to "b
 #### Testing ####
 
 ```
-npm run test
+npm run tests
 ```
 
 #### Prettier ####
