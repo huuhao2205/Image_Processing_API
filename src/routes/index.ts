@@ -8,7 +8,7 @@ const routes = express.Router();
 routes.get("/", (req: express.Request, res: express.Response) => {
   const imagesFilenames: string[] = fs
     .readdirSync(path.resolve("Assets/images/original"))
-    .map((filename) => filename.slice(0, -4));
+    .map(filename => filename.slice(0, -4));
   res.render("index", { filenames: imagesFilenames });
 });
 
