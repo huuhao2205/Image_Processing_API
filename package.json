@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@types/ejs": "^3.1.2",
     "@types/express": "^4.17.17",
     "@types/jasmine": "^4.3.1",
     "@types/node": "^18.15.10",
+    "@types/sharp": "^0.31.1",
+    "@types/shelljs": "^0.8.11",
     "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -17,12 +22,12 @@
     "typescript": "^5.0.2"
   },
   "scripts": {
-    "copy-file":"ts-node src/utils/copyViewFolder",
+    "copy-file": "ts-node src/utils/copyViewFolder",
     "build": "npx tsc && npm run copy-file",
     "jasmine": "jasmine",
     "start": "nodemon src/index.ts",
-    "prettier": "prettier --config .prettierrc build/**/*.js --write",
-    "lint": "eslint . --ext .js",
+    "prettier": "prettier --config .prettierrc src/**/*.ts --write",
+    "lint": "eslint . --ext .ts",
     "tests": "npm run build && npm run jasmine"
   },
   "keywords": [],
@@ -30,7 +35,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@types/shelljs": "^0.8.11",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "jasmine": "^4.6.0",

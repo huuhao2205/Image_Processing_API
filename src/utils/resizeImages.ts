@@ -10,7 +10,7 @@ const resizeImage = (
     .resize({
       width: width,
       height: height,
-      fit: sharp.fit.cover,
+      fit: sharp.fit.cover
     })
     .toBuffer();
 };
